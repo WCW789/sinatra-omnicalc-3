@@ -6,7 +6,19 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
 
+  <style>
+    .navbar {
+      display: flex;
+      justify-content: space-around;
+    }
+  </style>
+
   <body>
+    <div class="navbar">
+      <div><a href=/umbrella> Umbrella </a></div>
+      <div><a href=/message> Single AI Message </a></div>
+      <div><a href=/chat> AI Chat </a></div>
+    </div>
     <%= yield %>
   </body>
 </html>

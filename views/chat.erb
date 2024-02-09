@@ -1,0 +1,13 @@
+<dl>
+  <% @test_parse.each do |message_hash| %>
+    <% the_content = message_hash.fetch("content") %>
+    <dt><%= message_hash.fetch("role") %></dt>
+    <dd><%= Kramdown::Document.new(the_content).to_html %></dd>
+  <% end %>
+</dl>
+
+<%= erb(:chat_results) %>
+
+<hr>
+
+<%= erb(:chat_delete) %>
